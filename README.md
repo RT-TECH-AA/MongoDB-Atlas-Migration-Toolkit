@@ -1,6 +1,38 @@
 # MongoDB Atlas Migration Toolkit
 
 A set of tools to help those migrating from the Community Edition of MongoDB to [Atlas](https://www.mongodb.com/cloud/atlas).
+This script is designed to gather and display various statistics about a MongoDB cluster. Here’s a breakdown of what it does:
+
+Validate dbAdmin Role:
+
+Checks if the current user has the dbAdmin role required to collect information. If not, it prints a message indicating that the user lacks the necessary permissions.
+Compare Data Sizes:
+
+Retrieves and compares the storage and data sizes for each database in the cluster:
+storageSize: Total size used on disk, including compressed data and indexes.
+dataSize: Uncompressed size of the data.
+Computes compression ratio as a percentage of the difference between dataSize and storageSize.
+Print Database Details:
+
+Optionally prints details for each database, including size on disk, data size, and compression percentage.
+Compute and Print Cluster Totals:
+
+Calculates total storage and data sizes across all databases.
+Converts storage sizes to gigabytes.
+Computes and prints total compression percentage for the cluster.
+System and Replication Information:
+
+Displays system information like RAM and vCPUs.
+If the cluster is part of a replica set, it prints the number of nodes and oplog statistics:
+Total oplog size
+Used oplog space
+Oplog window (in hours)
+Average oplog size per hour
+Backup and Disk Space Information:
+
+Prints total data size and the size on disk.
+Provides details on the file system used and total file system size, along with the percentage of file system used.
+This script is useful for monitoring and analyzing MongoDB cluster statistics, including database sizes, compression, replication, and system resources.
 
 ## Cluster Stats
 The [cluster-stats.js](cluster-stats.js) script executes various MongoDB Shell commands to summarize your existing MongoDB environment. This is not intended as a sizing exercise, but rather a simple utility to help you map your existing runtime environment to its Atlas equivalent. 
