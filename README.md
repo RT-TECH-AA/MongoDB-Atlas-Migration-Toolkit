@@ -6,7 +6,7 @@ This script is designed to gather and display various statistics about a MongoDB
 ## 1. Validate dbAdmin Role:
 
 Checks if the current user has the dbAdmin role required to collect information. If not, it prints a message indicating that the user lacks the necessary permissions.
-Compare Data Sizes:
+## 2. Compare Data Sizes:
 
 Retrieves and compares the storage and data sizes for each database in the cluster:
 storageSize: Total size used on disk, including compressed data and indexes.
