@@ -3,7 +3,7 @@
 A set of tools to help those migrating from the Community Edition of MongoDB to [Atlas](https://www.mongodb.com/cloud/atlas).
 This script is designed to gather and display various statistics about a MongoDB cluster. Here’s a breakdown of what it does:
 
-Validate dbAdmin Role:
+## 1. Validate dbAdmin Role:
 
 Checks if the current user has the dbAdmin role required to collect information. If not, it prints a message indicating that the user lacks the necessary permissions.
 Compare Data Sizes:
