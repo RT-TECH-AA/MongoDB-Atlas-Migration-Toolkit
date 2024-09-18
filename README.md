@@ -1,4 +1,4 @@
-# Atlas Migration Toolkit
+# MongoDB Atlas Migration Toolkit
 
 A set of tools to help those migrating from the Community Edition of MongoDB to [Atlas](https://www.mongodb.com/cloud/atlas).
 
